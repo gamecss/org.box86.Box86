@@ -1,0 +1,40 @@
+{
+  "name": "box86",
+  "buildsystem": "cmake",
+  "config-opts": [
+    "-DCMAKE_BUILD_TYPE=RelWithDebInfo"
+  ],
+  "build-options": {
+    "arch": {
+      "arm": {
+        "config-opts": ["-DRPI4=1"]
+      },
+      "aarch64": {
+        "config-opts": ["-DRPI4ARM64=1"]
+      },
+      "x86": {
+        "config-opts": [
+          "-DCMAKE_C_FLAGS=-m32",
+          "-DLD80BITS=1"
+        ]
+      },
+      "x86_64": {
+        "config-opts": [
+          "-DCMAKE_C_FLAGS=-m32",
+          "-DCMAKE_ASM_FLAGS=-m32",
+          "-DCMAKE_LD_FLAGS=-m32",
+          "-DLD80BITS=1"
+        ]
+      }
+    }
+  },
+  "cleanup": [
+  ],
+  "sources": [
+    {
+        "type": "archive",
+        "url": "https://github.com/ptitSeb/box86/archive/refs/tags/v0.3.2.tar.gz",
+	"sha256": "468e887002706705bf003411fa47adb035e04e1cbeda3372405fed93f33fe8f4"
+    }
+  ]
+}

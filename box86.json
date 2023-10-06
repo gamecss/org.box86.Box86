@@ -1,0 +1,19 @@
+{
+  "app-id": "org.box86.Box86",
+  "runtime": "org.freedesktop.Sdk",
+  "runtime-version": "23.08",
+  "sdk": "org.freedesktop.Sdk",
+  "command": "box86",
+  "finish-args": [
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=wayland",
+    "--device=all",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--allow=multiarch",
+    "--allow=devel",
+    "--filesystem=host"
+  ],
+  "modules": ["box86/box86.json"]
+}
